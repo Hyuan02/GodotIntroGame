@@ -1,24 +1,27 @@
 extends AnimatedSprite
 
 const GRAVITY = 6.0;
-
-var speed = 5.0
-var moving = Vector2(0,1)
 const velocityX = 400;
 const velocityY = -700;
-var bodyNode;
+var bodyNode
+var timerNode
 var motion = Vector2(0,0);
 const NORMAL =  Vector2(0,-1)
+var shooting = true;
 
 func _ready():
 	bodyNode = get_node("../")
+	timerNode = get_node("../ShootTimer")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+# warning-ignore:unused_argument
 func _process(delta):
 	checkAnimation()
+	checkTimer()
 	pass
 	
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	checkControls()
 	motion.y +=20
@@ -35,6 +38,10 @@ func checkControls():
 		elif(Input.is_key_pressed(KEY_SPACE)):
 			if(bodyNode.is_on_floor()):
 				motion.y = velocityY
+		elif(Input.is_key_pressed(KEY_Z)):
+			if(!shooting):
+				shooting = true
+				shootBullet()
 		else:
 			motion.x = 0
 		pass
@@ -44,12 +51,29 @@ func checkAnimation():
 		self.animation = "Jump"
 	else:
 		if(motion.x>0):
-			self.animation = "Run"
+			if(shooting):
+				self.animation = "Run_Shoot"
+			else:
+				self.animation = "Run"
 			self.set_flip_h(false);
 		elif(motion.x<0):
-			self.animation = "Run"
+			if(shooting):
+				self.animation = "Run_Shoot"
+			else:
+				self.animation = "Run"
 			self.set_flip_h(true)
 		else:
-			self.animation = "Idle"
+			if(shooting):
+				self.animation = "Shoot"
+			else:
+				self.animation = "Idle"
+
+func shootBullet():
+	timerNode.start();
+	pass
 	
-	
+func checkTimer():
+	if(shooting):
+		if(timerNode.is_stopped()):
+			shooting = false
+	pass
