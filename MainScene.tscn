@@ -1,0 +1,94 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://cyberpunk-street-files/cyberpunk-street-files/PNG/layers/far-buildings.png" type="Texture" id=1]
+[ext_resource path="res://cyberpunk-street-files/cyberpunk-street-files/PNG/layers/foreground.png" type="Texture" id=2]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-1.png" type="Texture" id=3]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-2.png" type="Texture" id=4]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-3.png" type="Texture" id=5]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-4.png" type="Texture" id=6]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-8.png" type="Texture" id=7]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-1.png" type="Texture" id=8]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-2.png" type="Texture" id=9]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-3.png" type="Texture" id=10]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-4.png" type="Texture" id=11]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-5.png" type="Texture" id=12]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-6.png" type="Texture" id=13]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-7.png" type="Texture" id=14]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-1.png" type="Texture" id=15]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-2.png" type="Texture" id=16]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-3.png" type="Texture" id=17]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-4.png" type="Texture" id=18]
+[ext_resource path="res://AnimatedSprite.gd" type="Script" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1830, 20 )
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 640.949, 357.89 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1040, 0 )
+
+[node name="far-buildings" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 520, 330 )
+scale = Vector2( 4.08, 4.08 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+motion_mirroring = Vector2( 1622, 0 )
+
+[node name="foreground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 822, 365.198 )
+scale = Vector2( 4.64329, 3.76213 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 30, 4.03424 )
+scale = Vector2( 4, 4 )
+
+[node name="Player" type="AnimatedSprite" parent="KinematicBody2D"]
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 2
+playing = true
+centered = false
+script = ExtResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 37.5, 41.4914 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1830, 700 )
+shape = SubResource( 3 )
