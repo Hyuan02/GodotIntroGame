@@ -34,19 +34,19 @@ func _physics_process(delta):
 
 
 func checkControls():
+		if(Input.is_key_pressed(KEY_SPACE)):
+			if(bodyNode.is_on_floor()):
+				motion.y = velocityY
+		if(Input.is_key_pressed(KEY_Z)):
+			if(!shooting):
+				shooting = true
+				shootBullet()
 		if(Input.is_key_pressed(KEY_RIGHT)):
 			motion.x = velocityX
 			direction = direction.abs()
 		elif(Input.is_key_pressed(KEY_LEFT)):
 			motion.x = -velocityX
 			direction = -direction.abs()
-		elif(Input.is_key_pressed(KEY_SPACE)):
-			if(bodyNode.is_on_floor()):
-				motion.y = velocityY
-		elif(Input.is_key_pressed(KEY_Z)):
-			if(!shooting):
-				shooting = true
-				shootBullet()
 		else:
 			motion.x = 0
 		pass

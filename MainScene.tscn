@@ -6,27 +6,27 @@
 [ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-2.png" type="Texture" id=4]
 [ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-3.png" type="Texture" id=5]
 [ext_resource path="res://warped city files/warped city files/SPRITES/player/idle/idle-4.png" type="Texture" id=6]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-1.png" type="Texture" id=7]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-2.png" type="Texture" id=8]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-3.png" type="Texture" id=9]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-4.png" type="Texture" id=10]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-8.png" type="Texture" id=11]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-1.png" type="Texture" id=12]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-2.png" type="Texture" id=13]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-3.png" type="Texture" id=14]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-4.png" type="Texture" id=15]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-5.png" type="Texture" id=16]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-6.png" type="Texture" id=17]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-7.png" type="Texture" id=18]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-1.png" type="Texture" id=19]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-2.png" type="Texture" id=20]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-3.png" type="Texture" id=21]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-4.png" type="Texture" id=22]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-5.png" type="Texture" id=23]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-6.png" type="Texture" id=24]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-7.png" type="Texture" id=25]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-8.png" type="Texture" id=26]
-[ext_resource path="res://warped city files/warped city files/SPRITES/player/shoot/shoot.png" type="Texture" id=27]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/shoot/shoot.png" type="Texture" id=7]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-1.png" type="Texture" id=8]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-2.png" type="Texture" id=9]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-3.png" type="Texture" id=10]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/jump/jump-4.png" type="Texture" id=11]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-1.png" type="Texture" id=12]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-2.png" type="Texture" id=13]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-3.png" type="Texture" id=14]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-4.png" type="Texture" id=15]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-5.png" type="Texture" id=16]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-6.png" type="Texture" id=17]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-7.png" type="Texture" id=18]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run-shoot/run-shoot-8.png" type="Texture" id=19]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-8.png" type="Texture" id=20]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-1.png" type="Texture" id=21]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-2.png" type="Texture" id=22]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-3.png" type="Texture" id=23]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-4.png" type="Texture" id=24]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-5.png" type="Texture" id=25]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-6.png" type="Texture" id=26]
+[ext_resource path="res://warped city files/warped city files/SPRITES/player/run/run-7.png" type="Texture" id=27]
 [ext_resource path="res://AnimatedSprite.gd" type="Script" id=28]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -36,24 +36,24 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "Run",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Run_Shoot",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
-"name": "Shoot",
+"name": "Run",
 "speed": 5.0
 } ]
 
@@ -98,6 +98,7 @@ collision_mask = 2
 [node name="Player" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 2
 playing = true
 centered = false
 script = ExtResource( 28 )
